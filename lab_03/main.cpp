@@ -30,11 +30,11 @@ int main() {
     // blockCipherAES();
 
     key key128 = { 100, 65, 65, 200, 65, 64,67, 0, 65, 70, 65, 65, 65, 65, 65, 65 };
-    std::vector<uint8_t> message = {
-        'A', 'J', 'H', 'F', 'H', 'A', 'U', 'I', 'c', 'a', 'p', 'C',
-        'U', 'I', 'A', 'H', 'C', 'P', 'I', 'H', 'S', 'I', 'U', 'C',
-        'I', 'A'
-    };
+    // std::vector<uint8_t> message = {
+    //     'A', 'J', 'H', 'F', 'H', 'A', 'U', 'I', 'c', 'a', 'p', 'C',
+    //     'U', 'I', 'A', 'H', 'C', 'P', 'I', 'H', 'S', 'I', 'U', 'C',
+    //     'I', 'A'
+    // };
     block iv = { 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 };
 
     PCBC pcbc;
@@ -58,8 +58,8 @@ int main() {
     vector<uint8_t> message2 = readFromFile("/Users/stepa/Study/InfoSec/lab_03/data/file.bmp");
     vector<uint8_t> enc2 = pcbc.Encrypt(message2, iv, key128);
     writeToFile("/Users/stepa/Study/InfoSec/lab_03/data/enc.bmp", enc2);
-    message2 = readFromFile("/Users/stepa/Study/InfoSec/lab_03/data/enc.bmp");
-    writeToFile("/Users/stepa/Study/InfoSec/lab_03/data/dec.bmp", pcbc.Decrypt(message2, iv, key128));
+    enc2 = readFromFile("/Users/stepa/Study/InfoSec/lab_03/data/enc.bmp");
+    writeToFile("/Users/stepa/Study/InfoSec/lab_03/data/dec.bmp", pcbc.Decrypt(enc2, iv, key128));
 
     /**
      *
