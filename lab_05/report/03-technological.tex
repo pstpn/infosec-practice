@@ -1,0 +1,63 @@
+\chapter{Технологический раздел}
+
+\section{Средства реализации}
+
+В качестве языка программирования, используемого при написании лабораторной работы, был выбран C++~\cite{cpp-lang}.
+	
+\section{Реализация алгоритмов}
+
+На листингах~\ref{lst:compress.cpp}~--~\ref{lst:decompress.cpp} представлены реализации сжатия и разжатия произвольных документов.
+\includelistingpretty
+	{compress.cpp}
+	{c++}
+	{Реализация сжатия документа}
+
+\includelistingpretty
+	{decompress.cpp}
+	{c++}
+	{Реализация разжатия документа}
+
+\section{Демонстрация работы программы}
+
+На рисунке~\ref{img:demo} представлена демонстрация работы программы.
+\includeimage
+	{demo}
+	{f}
+	{H}
+	{.7\textwidth}
+	{Демонстрация работы программы}
+
+\section{Тестирование программы}
+
+В таблице~\ref{tbl:functional_test} представлены функциональные тесты для разработанной программы.
+\begin{table}[ht!]
+	\begin{center}
+		\captionsetup{justification=raggedright,singlelinecheck=off}
+		\caption{\label{tbl:functional_test} Функциональные тесты}
+		\begin{tabularx}{\textwidth}{|c|X|X|}
+			\hline
+			№ & Входные данные & Выходные данные \\
+			\hline
+			1 & пустой файл & пустой файл \\
+			\hline
+			2 & aaaaa & сжатые <<aaaaa>> \\
+			\hline
+			3 & сжатые <<aaaaa> & aaaaa \\
+			\hline
+			4 & abcde & сжатые <<abcde>> \\
+			\hline
+			5 & сжатые <<abcde>> & abcde \\
+			\hline
+			6 & зашифрованный файл file.txt & файл file.txt \\
+			\hline
+			7 & файл file.bmp & сжатый файл enc.bmp \\
+			\hline
+			8 & сжатый файл enc.bmp & файл dec.bmp \\
+			\hline
+			9 & файл file.zip & сжатый файл enc.zip \\
+			\hline
+			10 & сжатый файл enc.zip & файл dec.zip \\
+			\hline
+		\end{tabularx}
+	\end{center}
+\end{table}

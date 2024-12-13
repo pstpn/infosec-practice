@@ -76,7 +76,6 @@ void HuffmanCompression::buildCodes(const HuffmanNode* root, const std::string& 
     buildCodes(root->right, str + "1", huffmanCode);
 }
 
-
 void HuffmanCompression::writeFrequencyTable(std::ofstream& outFile, const std::map<unsigned char, int>& freqMap) {
     uint32_t size = freqMap.size();
     outFile.write(reinterpret_cast<char*>(&size), sizeof(size));
@@ -232,7 +231,6 @@ double calculateCompressionCoeff(const std::string& originalFile, const std::str
 
     return static_cast<double>(compressedSize) / static_cast<double>(originalSize);
 }
-
 
 int main() {
     try {
