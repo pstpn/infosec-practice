@@ -33,6 +33,10 @@ out/
 *.exe
 *.out
 *.app
+# Local
+.DS_Store
+.idea
+
 cmake-build-debug
 
 # Tex files

@@ -1,0 +1,54 @@
+\chapter{Технологический раздел}
+
+\section{Средства реализации}
+В качестве языка программирования, используемого при написании данной лабораторной работы, был выбран C++~\cite{cpp-lang}.
+	
+\section{Реализация алгоритмов}
+На листингах~\ref{lst:des.hpp}~--~\ref{lst:cfb.hpp} представлены реализации разрабатываемых модулей.
+\includelistingpretty
+	{des.hpp}
+	{c++}
+	{Реализация класса алгоритма DES}
+
+\includelistingpretty
+	{cfb.hpp}
+	{c++}
+	{Реализация класса шифровального алгоритма DES в режиме работы CFB}
+
+\section{Тестирование}
+В таблице~\ref{tbl:functional_test} представлены функциональные тесты.
+\begin{table}[ht!]
+	\begin{center}
+		\captionsetup{justification=raggedright,singlelinecheck=off}
+		\caption{\label{tbl:functional_test} Функциональные тесты}
+		\begin{tabular}{|m{1em}|m{15em}|m{15em}|}
+			\hline
+			№ & Входные данные & Выходные данные \\ 
+			\hline
+			1 & пустая строка & пустая строка \\
+			\hline
+			2 & пустой файл & пустой файл \\
+			\hline
+			3 & aaaaa & зашифрованный "aaaaa" \\
+			\hline
+			4 & зашифрованный "aaaaa" & aaaaa \\
+			\hline
+			5 & abcde & зашифрованный "abcde" \\
+			\hline
+			6 & зашифрованный "abcde" & abcde \\
+			\hline
+			7 & файл input.txt & зашифрованный файл input.txt \\
+			\hline
+			8 & зашифрованный файл input.txt & файл input.txt \\
+			\hline
+			9 & файл input.jpg & зашифрованный файл input.jpg \\
+			\hline
+			10 & зашифрованный файл input.jpg & файл input.jpg \\
+			\hline
+			11 & файл input.zip & зашифрованный файл input.zip \\
+			\hline
+			12 & зашифрованный файл input.zip & файл input.zip \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}

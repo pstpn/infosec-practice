@@ -1,0 +1,35 @@
+\documentclass{bmstu}
+
+\setlist[enumerate]{label=\arabic*)}
+
+\usepackage{dcolumn}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\usepackage{csvsimple}
+\usepackage{threeparttable}
+\usepackage{multirow}
+
+\bibliography{biblio}
+
+\begin{document}
+	
+	\makereporttitle{Информатика и системы управления}
+	{Программное обеспечение ЭВМ и информационные технологии}
+	{лабораторной работе №2}
+	{Защита информации}
+	{Алгоритм шифрования DES}
+	{}
+	{Постнов~С.~А./ИУ7-71Б}
+	{Чиж~И.~С.}
+	
+	\maketableofcontents
+	
+	\include{00-introduction}
+	\include{01-analysis}
+	\include{02-construction}
+	\include{03-technological}
+	\include{04-conclusion}
+	
+	\makebibliography
+	
+\end{document}
