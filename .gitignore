@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+.idea
+out/
+.DS_Store
 
 # Compiled Object files
 *.slo
@@ -30,3 +33,13 @@
 *.exe
 *.out
 *.app
+cmake-build-debug
+
+# Tex files
+*.aux
+*.xml
+*.toc
+*.gz
+*.log
+*.bbl
+*.blg
