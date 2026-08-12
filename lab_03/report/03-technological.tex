@@ -1,0 +1,57 @@
+\chapter{Технологический раздел}
+
+\section{Средства реализации}
+
+В качестве языка программирования, используемого при написании данной лабораторной работы, был выбран C++~\cite{cpp-lang}.
+	
+\section{Реализация алгоритмов}
+
+В листингах~\ref{lst:aes.cpp}~--~\ref{lst:pcbc.hpp} представлены реализации разрабатываемых модулей.
+\includelistingpretty
+	{aes.cpp}
+	{c++}
+	{Реализация класса алгоритма AES}
+\includelistingpretty
+	{pcbc.hpp}
+	{c++}
+	{Реализация класса шифровального алгоритма AES в режиме работы PCBC}
+
+\clearpage
+
+\section{Тестирование}
+В таблице~\ref{tbl:functional_test} представлены функциональные тесты.
+\begin{table}[ht!]
+	\begin{center}
+		\captionsetup{justification=raggedright,singlelinecheck=off}
+		\caption{\label{tbl:functional_test} Функциональные тесты}
+		\begin{tabular}{|m{1em}|m{15em}|m{15em}|}
+			\hline
+			№ & Входные данные & Выходные данные \\ 
+			\hline
+			1 & пустая строка & пустая строка \\
+			\hline
+			2 & пустой файл & пустой файл \\
+			\hline
+			3 & aaaaa & зашифрованный "aaaaa" \\
+			\hline
+			4 & зашифрованный "aaaaa" & aaaaa \\
+			\hline
+			5 & abcde & зашифрованный "abcde" \\
+			\hline
+			6 & зашифрованный "abcde" & abcde \\
+			\hline
+			7 & файл file.txt & зашифрованный файл file.txt \\
+			\hline
+			8 & зашифрованный файл file.txt & файл file.txt \\
+			\hline
+			9 & файл file.bmp & зашифрованный файл input.bmp \\
+			\hline
+			10 & зашифрованный файл file.bmp & файл file.bmp \\
+			\hline
+			11 & файл file.zip & зашифрованный файл file.zip \\
+			\hline
+			12 & зашифрованный файл file.rar & файл file.zip \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
