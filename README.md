@@ -1,35 +1,16 @@
-# <span style="color:#C0BFEC">🦔 ***InfoSec practice***</span>
+# Information security labs
 
-## <span style="color:#C0BFEC">📑 ***Description:*** </span>
+Four labs, each implementing a cipher or a compression scheme from scratch in C++ and
+running it over the same three kinds of input, a text file, a BMP image and a zip archive.
+Using the same inputs everywhere is deliberate, since an image makes it obvious when a mode
+leaks structure and an archive shows what happens to data that is already incompressible.
 
-Labs for the course "Information security". All labs are in the `lab_XX` directories, each with source code, data files and a full report (in Russian).
+| Lab | Topic |
+|-----|-------|
+| [lab_01](lab_01) | The Enigma machine, rotors, reflector and plugboard |
+| [lab_02](lab_02) | DES in CFB mode |
+| [lab_03](lab_03) | AES in PCBC mode |
+| [lab_05](lab_05) | A file archiver built on Huffman coding |
 
-## <span style="color:#C0BFEC">🗂️ ***Labs:*** </span>
-
-### <span style="color:#C0BFEC">[📎 Lab_01 — Enigma cipher machine:](lab_01)</span>
-
-    Implementation of the Enigma cipher machine (rotors, reflector, commutator).
-    Encrypts and decrypts text, image and zip files
-
-### <span style="color:#C0BFEC">[📎 Lab_02 — DES in CFB mode:](lab_02)</span>
-
-    Implementation of the DES block cipher in CFB mode.
-    Encrypts and decrypts text, image and zip files
-
-### <span style="color:#C0BFEC">[📎 Lab_03 — AES in PCBC mode:](lab_03)</span>
-
-    Implementation of the AES block cipher in PCBC mode.
-    Encrypts and decrypts text, BMP image and zip files
-
-### <span style="color:#C0BFEC">[📎 Lab_05 — Huffman archiver:](lab_05)</span>
-
-    File archiver based on Huffman coding.
-    Compresses and decompresses text, BMP image and zip files
-
-## <span style="color:#C0BFEC">📚 ***Structure:*** </span>
-
-Each lab contains:
-
-- `src/` or root — source code (C++)
-- `data/` — input files (text, images, archives)
-- `doc/` or `report/` — LaTeX report with analysis, diagrams and results (in Russian)
+Each lab keeps its sources at the root or in `src/`, the input files in `data/` and a LaTeX
+report with the analysis in `doc/` or `report/`.
